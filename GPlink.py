@@ -5,7 +5,7 @@ from bot import GPLink
 
 client = GPLink()
 
-@client.on_message(filter.regex(r"https:?//[^\s]=+") & filters.private)
+@client.on_message(filter.regex(r"https:?//[^\s]=+") & filters.private))
 async def url_handler(client, message):
     link = message.matches[0].group(0)
     try:
