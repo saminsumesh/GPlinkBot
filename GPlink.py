@@ -19,7 +19,7 @@ async def url_handler(client, message):
         await message.reply_text(f"There was an error {e}", qoute=True)
 
 async def make_shorturl(link):
-    url = "https://gplink.com/api"
+    url = "https://gplinks.in/api"
     params = {"api":API_KEY, "url": link}
 
     async with ClientSession().get(url, params=params, raise_for_status=True) as response:
