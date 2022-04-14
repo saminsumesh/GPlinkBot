@@ -31,7 +31,7 @@ async def link_handler(client, message):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Short Link", url=f"{short_url}")
                                               ],[
                                                 InlineKeyboardButton("Close", callback_data="close")
-                                              ]])
+                                              ]]))
     except Exception as e:
         print(e)
         await message.reply_text(f"There was an error {e}", quote=True)
