@@ -27,5 +27,3 @@ async def make_shorturl(link):
         return data["shorturl"]
 
 
-# I have used the same method of https://github.com/Mahesh0253/GPlink-bot to make the bot
-# All credits goes to the respective owners
