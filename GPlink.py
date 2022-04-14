@@ -1,9 +1,7 @@
 from aiohttp import ClientSession
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from bot import GPLink
-
-client = GPLink()
+from pyrogram Client as client
 
 @client.on_message(filters.regex(r"https:?//[^\s]=+") & filters.private)
 async def url_handler(client, message):
