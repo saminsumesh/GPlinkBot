@@ -38,12 +38,12 @@ async def url_handler(client, message):
 
 async def make_shorturl(link):
     url = "https://gplinks.in/api"
-    params = {"api":API_KEY, "url": link}
+    params = {"api": API_KEY, "url": link}
 
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
             data = await response.json()
-            return data["shorturl"]
+            return data["shortenedurl"]
 
 
 client.run()
