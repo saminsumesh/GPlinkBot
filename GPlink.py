@@ -1,7 +1,16 @@
 from aiohttp import ClientSession
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram Client as client
+from pyrogram Client
+from config import API_ID, API_HASH, TG_BOT_TOKEN, API_KEY
+
+
+client = Client(
+    "Gplink bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TG_BOT_TOKEN
+   )
 
 @client.on_message(filters.command("start") & filters.private)
 async def start(bot, message):
@@ -34,3 +43,4 @@ async def make_shorturl(link):
         return data["shorturl"]
 
 
+client.run()
