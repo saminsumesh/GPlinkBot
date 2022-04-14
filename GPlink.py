@@ -27,7 +27,7 @@ async def link_handler(client, message):
     try:
         short_link = await get_shortlink(link)
         await message.reply_text(
-            text="**Here is your shortened link**: {short_link}")                                             
+            text=f"**Here is your shortened link**: {short_link}")                                             
     except Exception as e:
         print(e)
         await message.reply_text(f"There was an error {e}", quote=True)
