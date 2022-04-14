@@ -31,9 +31,9 @@ async def link_handler(client, message):
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Short Link", url=f"{short_url}")
                                               ],[
                                                 InlineKeyboardButton("Close", callback_data="close")
-                                              ]]),
-            disable_web_page_preview=True)
+                                              ]])
     except Exception as e:
+        print(e)
         await message.reply_text(f"There was an error {e}", quote=True)
 
 async def get_shortlink(link):
