@@ -1,7 +1,8 @@
 from pyrogram import Client, filters
 from config import API_ID, API_HASH, TG_BOT_TOKEN
 
-class GPLink(object):
+class GPLink(Client):
+
   def __init__(self):
     super().__init__(
       "GPlink bot",
