@@ -3,6 +3,15 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram Client as client
 
+@client.on_message(filters.command("start") & filters.private)
+async def start(bot, message):
+    await message.reply_text(f"Hey {message.from_user.mention} ✨️, Iam a simple **[Gplink](https://gplinks.in) Shortner** Bot, Just forward me any link yoi want to shorten", disable_web_page_preview=True)
+
+@client.on_message(filter.regex("close"))
+async def close(bot, query):
+    await query.message.delete()
+
+
 @client.on_message(filters.regex(r"https:?//[^\s]=+") & filters.private)
 async def url_handler(client, message):
     link = message.matches[0].group(0)
