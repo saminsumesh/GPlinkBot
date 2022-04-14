@@ -34,7 +34,7 @@ async def url_handler(client, message):
                                               ]]),
             disable_web_page_preview=True)
     except Exception as e:
-        await message.reply_text(f"There was an error {e}", qoute=True)
+        await message.reply_text(f"There was an error {e}", quote=True)
 
 async def make_shorturl(link):
     url = "https://gplinks.in/api"
