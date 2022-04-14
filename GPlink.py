@@ -22,10 +22,10 @@ async def close(bot, query):
 
 
 @client.on_message(filters.regex(r"https:?//[^\s]+") & filters.private)
-async def url_handler(client, message):
+async def link_handler(client, message):
     link = message.matches[0].group(0)
     try:
-        short_url = await make_shorturl(link)
+        short_link = await get_shortlink(link)
         await message.reply_text(
             text="Here is your shortened link",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Short Link", url=f"{short_url}")
@@ -36,7 +36,7 @@ async def url_handler(client, message):
     except Exception as e:
         await message.reply_text(f"There was an error {e}", quote=True)
 
-async def make_shorturl(link):
+async def get_shortlink(link):
     url = "https://gplinks.in/api"
     params = {"api": API_KEY, "url": link}
 
