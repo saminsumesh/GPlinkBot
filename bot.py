@@ -14,7 +14,7 @@ class GPLink(object):
       super().start_gp()
       print("Bot has been started")
       
-    async def stop_gp(self):
+    async def stop_gp(self, *args):
       super().stop_gp()
       print("Bot stopped.Bye")
 
