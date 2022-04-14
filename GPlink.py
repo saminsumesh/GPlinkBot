@@ -16,7 +16,7 @@ client = Client(
 async def start(bot, message):
     await message.reply_text(f"Hey {message.from_user.mention} ✨️, Iam a simple **[Gplink](https://gplinks.in) Shortner** Bot, Just forward me any link yoi want to shorten", disable_web_page_preview=True)
 
-@client.on_message(filter.regex("close"))
+@client.on_message(filters.regex("close"))
 async def close(bot, query):
     await query.message.delete()
 
