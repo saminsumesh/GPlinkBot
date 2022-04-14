@@ -8,7 +8,7 @@
     "website": "https://github.com/SaminSunesh/GPlinkbot",
     "repository": "https://github.com/SaminSuemesh/GPlinkbot",
     "env": {
-        "BOT_TOKEN": {
+        "TG_BOT_TOKEN": {
             "description": "Your bot token",
             "value": ""
         },
