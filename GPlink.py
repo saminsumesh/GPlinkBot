@@ -1,7 +1,7 @@
 from aiohttp import ClientSession
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram Client
+from pyrogram import Client
 from config import API_ID, API_HASH, TG_BOT_TOKEN, API_KEY
 
 
